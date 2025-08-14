@@ -1,0 +1,11 @@
+{
+    "name": "acme/mautic-dual-smtp-bundle",
+    "description": "Mautic plugin to select SMTP server based on contact field",
+    "type": "mautic-plugin",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "MauticPlugin\\DualSmtpBundle\\": ""
+        }
+    }
+}
