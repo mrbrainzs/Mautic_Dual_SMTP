@@ -1,17 +1,12 @@
 # Dual SMTP Bundle
 
 This repository contains a Mautic plugin that switches to a secondary SMTP
-server and sender details based on the value of a contact's custom field
-`smtp`.
+
 
 When an email is sent, the plugin inspects the contact's `smtp` field:
 
 - Value `2` switches the transport to the custom SMTP DSN configured for the
-  plugin and rewrites the sender address, reply-to, and return-path.
-- Any other value, including `1`, leaves the default SMTP settings in place.
 
-The secondary DSN and sender addresses can be configured in
-`Config/config.php` or overridden through environment parameters.
 
 ## Installation
 
