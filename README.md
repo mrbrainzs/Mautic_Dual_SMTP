@@ -5,16 +5,12 @@ server based on the value of a contact's custom field `smtp`.
 
 When an email is sent, the plugin inspects the contact's `smtp` field:
 
-- Value `1` (or anything other than `2`) leaves the default SMTP settings in
-  place.
-- Value `2` switches the transport to the custom SMTP DSN and rewrites the
-  sender details to:
-  - From: `info@crm.datainnovation.io`
-  - Reply-To: `info@datainnovation.io`
-  - Return-Path: `info@crm.datainnovation.io`
+- Value `2` switches the transport to the custom SMTP DSN configured for the
+  plugin.
+- Any other value, including `1`, leaves the default SMTP settings in place.
 
-The custom DSN and email addresses can be configured in `Config/config.php` or
-overridden through environment parameters.
+The secondary DSN can be configured in `Config/config.php` or overridden through
+environment parameters.
 
 ## Installation
 

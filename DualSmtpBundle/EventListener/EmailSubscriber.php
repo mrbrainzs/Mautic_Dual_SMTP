@@ -14,12 +14,8 @@ use Symfony\Component\Mailer\Transport;
  */
 class EmailSubscriber implements EventSubscriberInterface
 {
-    public function __construct(
-        private string $dsn2,
-        private string $fromEmail,
-        private string $replyToEmail,
-        private string $returnPath
-    ) {
+    public function __construct(private string $dsn2)
+    {
     }
 
     public static function getSubscribedEvents(): array
@@ -53,10 +49,6 @@ class EmailSubscriber implements EventSubscriberInterface
         if (null === $helper) {
             return;
         }
-
-        $helper->setFrom($this->fromEmail);
-        $helper->setReplyTo($this->replyToEmail);
-        $helper->setReturnPath($this->returnPath);
 
         // Overwrite the MailHelper's transport through reflection
         $refClass = new \ReflectionClass($helper);
