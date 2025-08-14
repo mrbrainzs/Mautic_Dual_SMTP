@@ -10,6 +10,8 @@
                 "arguments": [
                     "%dual_smtp.dsn_2%"
                 ]
+
+                "arguments": ["%dual_smtp.dsn_2%"]
             }
         },
         "parameters": {
