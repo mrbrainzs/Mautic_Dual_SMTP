@@ -7,6 +7,10 @@
         "events": {
             "mautic.dual_smtp.email_subscriber": {
                 "class": "MauticPlugin\\DualSmtpBundle\\EventListener\\EmailSubscriber",
+                "arguments": [
+                    "%dual_smtp.dsn_2%"
+                ]
+
                 "arguments": ["%dual_smtp.dsn_2%"]
             }
         },
